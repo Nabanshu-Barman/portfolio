@@ -42,6 +42,9 @@ header {
   background-color: #333;
   color: #fff;
   padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header h1 {
@@ -70,11 +73,13 @@ nav ul li a {
 
 #hero h2 {
   font-size: 2.5rem;
+  animation: fadeIn 2s ease-in-out;
 }
 
 #hero p {
   font-size: 1.2rem;
   margin: 20px 0;
+  animation: fadeIn 2.5s ease-in-out;
 }
 
 .highlight {
@@ -90,6 +95,11 @@ nav ul li a {
 #about h2 {
   text-align: center;
   margin-bottom: 20px;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+#about p {
+  animation: slideInRight 1s ease-in-out;
 }
 
 /* Projects Section */
@@ -101,6 +111,7 @@ nav ul li a {
 #projects h2 {
   text-align: center;
   margin-bottom: 40px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .project-grid {
@@ -115,6 +126,7 @@ nav ul li a {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  animation: fadeInUp 1s ease-in-out;
 }
 
 .project-card h3 {
@@ -130,6 +142,7 @@ nav ul li a {
 #skills h2 {
   text-align: center;
   margin-bottom: 40px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .skills-list {
@@ -144,6 +157,27 @@ nav ul li a {
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Achievements Section */
+#achievements {
+  padding: 80px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+#achievements h2 {
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#achievements p {
+  animation: slideInLeft 1s ease-in-out;
+}
+
+#achievements .btn {
+  margin-top: 20px;
 }
 
 /* Contact Section */
@@ -155,6 +189,7 @@ nav ul li a {
 
 #contact h2 {
   margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .social-links {
@@ -168,6 +203,7 @@ nav ul li a {
   font-size: 1.5rem;
   color: #007BFF;
   transition: color 0.3s ease;
+  animation: fadeInUp 1s ease-in-out;
 }
 
 .social-links a:hover {
@@ -180,4 +216,25 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
